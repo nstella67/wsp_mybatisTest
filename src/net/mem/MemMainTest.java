@@ -52,8 +52,8 @@ public class MemMainTest {
 				System.out.print(dto.getName()+" ");
 				System.out.print(dto.getAge()+" ");
 				System.out.println();
-			}//end
-*/			
+			}//end*/
+			
 			//	→ f) 상세보기
 			/*MemDTO dto=sql.selectOne("mem.selectRead", new MemDTO(7));
 			System.out.print(dto.getNum()+" ");
@@ -64,6 +64,7 @@ public class MemMainTest {
 			//	→ g) 검색
 			//		→ 이름에 '튜' 글자가 있는 행 검색
 			List<MemDTO> list=sql.selectList("mem.search", "튜");
+			System.out.println("검색결과--------------");
 			for(int idx=0; idx<list.size(); idx++) {
 				MemDTO dto=list.get(idx);
 				System.out.print(dto.getNum()+" ");
@@ -71,7 +72,10 @@ public class MemMainTest {
 				System.out.print(dto.getAge()+" ");
 				System.out.println();
 			}//end
+			System.out.println("------------------------");
 			
+			//레코드 갯수
+			System.out.println("레코드갯수 : "+sql.selectOne("mem.rowCount"));
 			
 		}catch(Exception e) {
 			System.out.println("실패 : "+e);

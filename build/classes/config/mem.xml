@@ -68,4 +68,8 @@
 		<include refid="sort"></include>
 	</select>
 	
+	<select id="rowCount" resultType="int">
+		SELECT COUNT(*) FROM mem
+	</select>
+	
 </mapper>
